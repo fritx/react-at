@@ -4,7 +4,7 @@
 
 - [x] Filter/Scroll/Insert/Delete
 - [x] Keyboard/Mouse events
-- [x] Plain-Text based, no jquery, no extra nodes
+- [x] Plain-text based, no jQuery, no extra nodes
 - [x] ContentEditable
 - [ ] Textarea
 
@@ -15,9 +15,9 @@
 - It is [buggy][buggy].
 - It seems like out of maintainment.
 - It is based on jQuery.
-- Its code is like "Spaghetti" and hard to read or modify.
+- Its code is like "Spaghetti" and hard to read.
 
-Finally I lost interest in [patching it][buggy] and ended up creating my at library.
+Finally I lost interest in [patching it][buggy] and ended up creating my At-library.
 
 ```jsx
 import Editor from 'react-editor'
@@ -26,6 +26,10 @@ const members = ['Roxie Miles', 'grace.carroll', '小浩']
 
 <At members={members}>
   <Editor />
+</At>
+
+<At members={members}>
+  <div contentEditable />
 </At>
 ```
 
