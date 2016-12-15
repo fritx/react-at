@@ -1,6 +1,6 @@
 # react-at
 
-<img width="400" height="388" src="https://raw.githubusercontent.com/fritx/react-at/dev/shot.jpeg">
+<img width="400" height="335" src="https://raw.githubusercontent.com/fritx/react-at/dev/shot.png">
 
 - [x] Filter/Scroll/Insert/Delete
 - [x] Keyboard/Mouse events

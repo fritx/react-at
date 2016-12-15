@@ -129,20 +129,20 @@ export default class Atwho extends Component {
             this.refs.cur.scrollIntoViewIfNeeded()
           })
         }
+        return
       }
       if (e.keyCode === 13) { // enter
         this.selectItem()
         e.preventDefault()
         e.stopPropagation()
+        return
       }
       if (e.keyCode === 27) { // esc
         this.closePanel()
+        return
       }
-      return
     }
-    setTimeout(() => {
-      this.handleInput()
-    }, 50)
+    setTimeout(this.handleInput, 50)
 
     if (e.keyCode === 8) {
       this.handleDelete(e)
@@ -183,7 +183,7 @@ export default class Atwho extends Component {
         })
         if (matched.length) {
           this.openPanel(matched, range, index)
-        } else if (!global._inComposition) {
+        } else {
           this.closePanel()
         }
       }
@@ -200,7 +200,8 @@ export default class Atwho extends Component {
   openPanel(list, range, offset) {
     const fn = () => {
       const r = range.cloneRange()
-      r.setStart(r.endContainer, offset) // 从@开始 包括@
+      r.setStart(r.endContainer, offset + 1) // 从@后第一位开始
+      // todo: 根据窗口空间 判断向上或是向下展开
       const rect = r.getClientRects()[0]
       this.setState({
         atwho: {

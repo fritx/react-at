@@ -43,24 +43,6 @@
   box-shadow: 0 0 10px 0 rgba(101, 111, 122, .5);
 }
 .atwho-view ul {
-  &::-webkit-scrollbar {
-    width: 11px;
-    height: 11px;
-  }
-  &::-webkit-scrollbar-track {
-    // background-color: rgba(127, 127, 127, .1);
-    background-color: #F5F5F5;
-  }
-  &::-webkit-scrollbar-thumb {
-    min-height: 36px;
-    border: 2px solid transparent;
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-    background-clip: padding-box;
-    border-radius: 7px;
-    // background-color: rgba(0, 0, 0, 0.2);
-    background-color: #C4C4C4;
-  }
   max-height: 136px;
   padding: 0;
   margin: 0;
@@ -95,10 +77,29 @@
 .atwho-view {
   position: absolute;
   bottom: 0;
+  left: -0.8em; // 抵消左边距
   cursor: default;
   background-color: rgba(255,255,255,.94);
   min-width: 140px;
   max-width: 180px;
   max-height: 200px;
   overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 11px;
+    height: 11px;
+  }
+  &::-webkit-scrollbar-track {
+    // background-color: rgba(127, 127, 127, .1);
+    background-color: #F5F5F5;
+  }
+  &::-webkit-scrollbar-thumb {
+    min-height: 36px;
+    border: 2px solid transparent;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    background-clip: padding-box;
+    border-radius: 7px;
+    // background-color: rgba(0, 0, 0, 0.2);
+    background-color: #C4C4C4;
+  }
 }
