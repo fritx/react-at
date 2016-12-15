@@ -1,6 +1,7 @@
 {
   "name": "react-at",
   "version": "0.0.0",
+  "description": "At.js for React",
   "repository": "git@github.com:fritx/react-at.git",
   "license": "MIT",
   "main": "dist/index.js",

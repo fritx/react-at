@@ -61,10 +61,14 @@ export default class Atwho extends Component {
 
   constructor(...args) {
     super(...args)
+    this.handleCompositionStart = ::this.handleCompositionStart
+    this.handleCompositionEnd = ::this.handleCompositionEnd
     this.handleInput = ::this.handleInput
     this.handleKeyDown = ::this.handleKeyDown
     this.handleItemHover = ::this.handleItemHover
     this.handleItemClick = ::this.handleItemClick
+
+    this.hasComposition = false
     this.state = {
       atwho: null,
     }
@@ -144,7 +148,17 @@ export default class Atwho extends Component {
       this.handleDelete(e)
     }
   }
+
+  // compositionStart -> input -> compositionEnd
+  handleCompositionStart() {
+    this.hasComposition = true
+  }
+  handleCompositionEnd() {
+    this.hasComposition = false
+    this.handleInput()
+  }
   handleInput() {
+    if (this.hasComposition) return
     const range = getPrecedingRange()
     if (range) {
       let show = true
@@ -260,6 +274,8 @@ export default class Atwho extends Component {
       <div
         ref="wrap"
         className="atwho-wrap"
+        onCompositionStart={this.handleCompositionStart}
+        onCompositionEnd={this.handleCompositionEnd}
         onInput={this.handleInput}
         onKeyDown={this.handleKeyDown}
       >

@@ -17,7 +17,7 @@
 - It is based on jQuery.
 - Its code is like "Spaghetti" and hard to read.
 
-Finally I lost interest in [patching it][buggy] and ended up creating my At-library.
+Finally I lost interest in [patching it][buggy] and ended up creating this.
 
 ```jsx
 import Editor from 'react-editor'
