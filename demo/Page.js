@@ -72,7 +72,8 @@ export default class Page extends Component {
       <div
         onFocus={(e) => this.onFocus(e)}
         onBlur={(e) => this.onBlur(e)}
-        onKeyDown={(e) => this.onKeyDown(e)}>
+        onKeyDown={(e) => this.onKeyDown(e)}
+      >
         <At members={members}>
           <Editor ref="editor" className="editor" />
         </At>

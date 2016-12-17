@@ -6,7 +6,9 @@
 - [x] Keyboard/Mouse events
 - [x] Plain-text based, no jQuery, no extra nodes
 - [x] ContentEditable
-- [ ] Textarea
+- [ ] Avatar
+
+See also: [vue-at][vue-at]
 
 ## Motivation
 
@@ -33,5 +35,6 @@ const members = ['Roxie Miles', 'grace.carroll', '小浩']
 </At>
 ```
 
+[vue-at]: https://github.com/fritx/vue-at
 [at.js]: https://github.com/ichord/At.js
 [buggy]: https://github.com/ichord/At.js/issues/411#issuecomment-256662090
